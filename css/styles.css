@@ -31,6 +31,7 @@ ul {
 }
 img {
     display: block;
+    width: 100%;
 }
 .container {
     max-width: 1158px;
@@ -38,7 +39,7 @@ img {
     padding: 0 15px;
 }
 .section {
-    padding: 120px 0;
+    padding: 96px 0;
 }
 /* NAWIGATION */
 .header-box {
@@ -102,14 +103,6 @@ img {
 .nav-list, .contact-link {
     display: none
 }
-.nav-box {
-    display: flex;
-    justify-content: space-between;
-}
-.logo-nav-box {
-    display: flex;
-    align-items: center;
-}
 .active {
     position: relative;
     color: var(--focus-color);
@@ -127,6 +120,9 @@ img {
 }
 
 @media (min-width: 768px) {
+    .section {
+        padding: 120px 0;
+    }
     .nav-list {
         display: flex;
         gap: 40px;
@@ -238,6 +234,7 @@ img {
     text-transform: capitalize;
 }
 .section-text {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -278,7 +275,9 @@ img {
             font-weight: 500;
             font-size: 20px;
         }
-
+.section-text {
+    font-weight: 400;
+}
 .first-section-icon-box {
         background-color: var(--footer-white-color);
         border-radius: 4px;
@@ -373,6 +372,7 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
+    cursor: pointer;
 
 }
 
@@ -483,6 +483,9 @@ text-align: center;
     margin-left: 16px;
 }
 @media (max-width: 1157px) {
+.subscribe-form-input {
+    opacity: 0.3;
+}
 .footer-box {
     justify-content: center;
     row-gap: 72px;
@@ -523,6 +526,9 @@ text-align: center;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 .modal {
     position: absolute;
@@ -564,9 +570,9 @@ transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cu
 fill: #ffffff;
 }
 .is-open {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 .input-box {
     margin-bottom: 8px;
@@ -669,6 +675,9 @@ margin-bottom: 24px;
     background-color: var(--white-color);
     padding: 24px 24px 40px 16px;
     max-width: 320px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .hamburger-heading {
