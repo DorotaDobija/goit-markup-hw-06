@@ -404,6 +404,11 @@ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
 .portfolio-list-item:hover .overlay {
     transform: translateY(0);
 }
+@media (min-width: 768px) {
+    .portfolio-list-item {
+        width: calc((100% - 24px) / 2);
+    }
+}
 
 @media (min-width: 1158px) {
     .portfolio-list-item {
