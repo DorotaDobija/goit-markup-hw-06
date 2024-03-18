@@ -136,8 +136,11 @@ img {
         gap: 12px;
         }
     .nav-box {
-        padding: 24px 16px;
+        padding: 2px 16px;
     }
+        .active::after {
+            bottom: 1px;
+        }
     .hamburger-menu-icon, .hamburger-menu {
         display: none;
     }
